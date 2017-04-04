@@ -1,9 +1,9 @@
 <?php
 
-namespace myFirstLaravelApp\Http\Controllers\Auth;
+namespace laravelCRUD\Http\Controllers\Auth;
 
-use myFirstLaravelApp\User;
-use myFirstLaravelApp\Http\Controllers\Controller;
+use laravelCRUD\User;
+use laravelCRUD\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
 

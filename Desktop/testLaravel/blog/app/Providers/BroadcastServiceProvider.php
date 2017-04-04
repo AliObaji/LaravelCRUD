@@ -1,6 +1,6 @@
 <?php
 
-namespace myFirstLaravelApp\Providers;
+namespace laravelCRUD\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Broadcast;

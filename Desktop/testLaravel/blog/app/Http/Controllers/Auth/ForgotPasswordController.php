@@ -1,8 +1,8 @@
 <?php
 
-namespace myFirstLaravelApp\Http\Controllers\Auth;
+namespace laravelCRUD\Http\Controllers\Auth;
 
-use myFirstLaravelApp\Http\Controllers\Controller;
+use laravelCRUD\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\SendsPasswordResetEmails;
 
 class ForgotPasswordController extends Controller

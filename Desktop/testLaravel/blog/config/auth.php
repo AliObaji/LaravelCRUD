@@ -67,7 +67,7 @@ return [
     'providers' => [
         'users' => [
             'driver' => 'eloquent',
-            'model' => myFirstLaravelApp\User::class,
+            'model' => laravelCRUD\User::class,
         ],
 
         // 'users' => [

@@ -15,6 +15,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('test',function(){
-    return view('myPage',['name' => 'Ali']);
-});
+Route::resource('itemsCRUD','itemsCRUDController');
+
+Route::get('hi','testCtrl@Hi')->name('hi');

@@ -1,6 +1,6 @@
 <?php
 
-namespace myFirstLaravelApp\Http\Controllers;
+namespace laravelCRUD\Http\Controllers;
 
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Routing\Controller as BaseController;
