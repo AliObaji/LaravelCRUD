@@ -13,6 +13,40 @@
 @section('content')
 <h1>HELLO</h1>
 
+<div class="row">
+
+    <div class="col-lg-12 margin-tb">
+
+        <div class="pull-left">
+
+            <h2>Items CRUD</h2>
+
+        </div>
+
+        <div class="pull-right">
+
+            <a class="btn btn-success" href="{{ route('itemsCRUD.create') }}"> Create New Item</a>
+
+        </div>
+
+    </div>
+
+</div>
+
+<table class="table table-bordered">
+
+    <tr>
+
+        <th>No</th>
+
+        <th>Title</th>
+
+        <th>Description</th>
+
+        <th width="280px">Action</th>
+
+    </tr>
+
 @foreach ($items as $key => $item)
 
 <tr>
@@ -40,4 +74,6 @@
 </tr>
 
 @endforeach
+</table>
+{!! $items->render() !!}
 @endsection

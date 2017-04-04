@@ -14,4 +14,8 @@ class itemsCRUDController extends Controller
         $items = Item::orderBy('id','DESC')->paginate(5);
         return view('ItemCRUD.index',compact('items'));
     }
+    public function create(){
+        return view('ItemCRUD.create');
+
+    }
 }
