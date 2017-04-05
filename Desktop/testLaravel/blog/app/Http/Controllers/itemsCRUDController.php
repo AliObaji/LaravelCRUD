@@ -39,7 +39,20 @@ class itemsCRUDController extends Controller
             ->with('success','Item deleted successfully');
 
     }
-    public function edit(){
+    public function edit($id){
+        $item = Item::find($id);
+        return view('ItemCRUD.edit',compact('item'));
+    }
 
+    public function update(Request $request,$id){
+        $this->validate($request,[
+            'title' => 'required',
+            'description' => 'required'
+        ]);
+
+        Item::find($id)-> update($request->all());
+
+        return redirect()-> route('itemsCRUD.index')
+            ->with('success','Item edited successfully');
     }
 }
