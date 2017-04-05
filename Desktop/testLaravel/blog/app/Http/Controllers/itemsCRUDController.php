@@ -7,7 +7,6 @@ use laravelCRUD\Item;
 
 class itemsCRUDController extends Controller
 {
-    public $list = array(1,2,3);
 
     public function index()
     {
@@ -29,10 +28,15 @@ class itemsCRUDController extends Controller
 
     }
 
-    public function show(){
+    public function show($id){
+        $itemRequested = Item::find($id);
+        return view('ItemCRUD.show',compact('itemRequested'));
 
     }
-    public function destroy(){
+    public function destroy($id){
+        Item::find($id)->delete();
+        return redirect()-> route('itemsCRUD.index')
+            ->with('success','Item deleted successfully');
 
     }
     public function edit(){
