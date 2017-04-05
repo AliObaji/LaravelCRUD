@@ -16,6 +16,26 @@ class itemsCRUDController extends Controller
     }
     public function create(){
         return view('ItemCRUD.create');
+    }
+    public function store(Request $request){
+        $this->validate($request,[
+            "title" => 'required',
+            "description" => 'required'
+        ]);
+        Item::create($request->all());
+
+        return redirect()-> route('itemsCRUD.index')
+            ->with('success','Item created successfully');
+
+    }
+
+    public function show(){
+
+    }
+    public function destroy(){
+
+    }
+    public function edit(){
 
     }
 }
